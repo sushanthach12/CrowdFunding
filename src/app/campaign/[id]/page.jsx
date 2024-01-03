@@ -158,22 +158,22 @@ const CampignID = async({ params}) => {
 
 export default CampignID
 
-export const getServerSideProps = async (context) => {
-  console.log(context.query)
-  const res = await fetch('http://localhost:5000/api/campaign/getCampaign', {
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json'
-    },
-    body: JSON.stringify({ id: context.query.id })
-  })
+// export const getServerSideProps = async (context) => {
+//   console.log(context.query)
+//   const res = await fetch('http://localhost:5000/api/campaign/getCampaign', {
+//     method: 'POST',
+//     headers: {
+//       'Content-type': 'application/json'
+//     },
+//     body: JSON.stringify({ id: context.query.id })
+//   })
 
-  const campaign = await res.json();
-  console.log(response)
+//   const campaign = await res.json();
+//   console.log(response)
 
-  return {
-    props: {
-      campaign: campaign
-    }
-  }
-}
+//   return {
+//     props: {
+//       campaign: campaign
+//     }
+//   }
+// }
